@@ -1,0 +1,9 @@
+#this file is managed by ansible
+#any manual update will be overwritten
+[mysqld]
+user = {{ mysql_user | default("mysql") }}
+pid-file = {{ mysql_pid }}
+socket = {{ mysql-socket }}
+port = {{ mysql_port }}
+datadir = {{ mysql_datadir }}
+bind-address = {{ mysql_bind }}
