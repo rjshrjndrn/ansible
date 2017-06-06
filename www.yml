@@ -1,0 +1,10 @@
+---
+- hosts: www
+  remote_user: rajesh
+  become: True
+  pre_tasks:
+    - shell: echo 'Configuring Web Server ...'
+  roles:
+    - nginx
+  post_tasks:
+    - shell: echo 'Successfully configured nginx web server...'

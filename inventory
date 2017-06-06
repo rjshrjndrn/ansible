@@ -1,0 +1,8 @@
+#custom hosts
+#inventory configs for my cluster
+[db]
+192.168.1.56 ansible_ssh_user=user
+[www]
+web.local.lab ansible_ssh_user=user
+[lb]
+lb.local.lab ansible_ssh_user=user

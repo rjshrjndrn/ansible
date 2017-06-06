@@ -1,0 +1,39 @@
+---
+- hosts: all
+  remote_user: rajesh 
+  become: True
+  tasks:
+
+    - group:
+       name: devops
+       state: present
+    
+    - name: create devops user with admin privileges
+      user: 
+       name: devops
+       comment: "DevOps User"
+       uid: 2001
+       group: devops
+
+    - name: install net-tools package
+      action: yum name=net-tools state=present update_cache=yes
+
+- hosts: www
+  user: user
+  become: True
+  tasks:
+
+    - name: updating the Nginx Repo
+      yum_repository:
+        name: nginx
+        description: Nginx Yum Repo
+        baseurl: 'http://nginx.org/packages/centos/$releasever/$basearch/'
+        gpgcheck: no
+    
+    - name: install Nginx webserver
+      action: yum name=nginx state=present
+
+    - name: start Nginx service
+      action: service name=nginx state=started
+
+

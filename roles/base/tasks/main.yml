@@ -1,0 +1,20 @@
+---
+#essential tasks. Should run on all nodes
+ - name: Creating DevOps group
+   group: name=devops state=present
+
+ - name: Creating DevOps user
+   user:
+     name: devops
+     comment: DevOps User
+     uid: 2001
+     group: devops
+
+ - name: install net-tools and libselinux-python
+   yum: pkg={{item}} state=installed
+   with_items:
+     - net-tools
+     - libselinux-python
+     
+
+

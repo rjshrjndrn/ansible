@@ -1,0 +1,13 @@
+---
+ - name: configuring Nginx
+   copy:
+     src: default.conf
+     dest: /etc/nginx/conf.d/default.conf
+     mode: 0644
+   notify:
+    - restart nginx service
+ - name: create home page for nginx to serve
+   copy:
+     src: index.html
+     dest: /usr/share/nginx/html/index.html
+

@@ -1,0 +1,13 @@
+---
+ - name: Installing officical nginx repo
+   yum_repository:
+     name: Nginx
+     description: Nginx official repo
+     baseurl: 'http://nginx.org/packages/centos/$releasever/$basearch/'
+     gpgcheck: no
+ - name: Install Nginx and uptodate
+   yum:
+     name: nginx
+     state: installed
+
+
