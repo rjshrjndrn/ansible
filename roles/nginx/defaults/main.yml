@@ -1,0 +1,7 @@
+---
+#
+#static variables
+#
+nginx_listen_port: 80
+nginx_root_path: /usr/share/nginx/html
+nginx_index_page: index.html
