@@ -1,0 +1,8 @@
+---
+#database playbook
+- hosts: db
+  remote_user: rajesh
+  become: yes
+  roles:
+    - { role: mysql,mysql_bind: "{{ ansible_enp0s3.ipv4.address }}" }
+
