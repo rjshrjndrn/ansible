@@ -1,0 +1,6 @@
+This is a simple ansible configuration which will 
+install and configure a nginx webserver
+database
+and load balancer.
+I'll try to keep this as general as possible
+
