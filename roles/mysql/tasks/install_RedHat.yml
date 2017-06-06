@@ -1,0 +1,6 @@
+---
+- name: install RedHat Mysql
+  yum:
+    name: "{{ mysql_pkg }}"
+    update_cache: yes
+
