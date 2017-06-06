@@ -1,5 +1,5 @@
 ---
-# defaults file for mysql
+# defaults file for mysql in debian
 mysql_user: mysql
 mysql_port: 3306
 mysql_datadir: /var/lib/mysql
@@ -8,4 +8,4 @@ mysql_pkg: mariadb-server
 mysql_pid: /var/run/mysqld/mysqld.pid
 mysql_socket: /var/run/mysqld/mysql.sock
 mysql_cnfpath: /etc/mysql/my.cnf
-mysql_service: mysql
+mysql_service: mariadb

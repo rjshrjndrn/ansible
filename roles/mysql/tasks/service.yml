@@ -3,4 +3,4 @@
 - name: start mysql server
   service:
     name: "{{ mysql_service }}"
-    state: started
+    state: stop

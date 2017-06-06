@@ -4,3 +4,9 @@ database
 and load balancer.
 I'll try to keep this as general as possible
 
+templates in in roles/nginx/templates folder
+varible assigning in roles/nginx/defaults
+
+
+ansible-galaxy is a scaffolding generator, which connected with galaxy.ansible
+ansible-galaxy init --init-path roles/ mysql<name of the role>

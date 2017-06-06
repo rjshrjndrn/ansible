@@ -1,1 +1,1 @@
-mysql_bind:"{{ ansible_enp0s3.ipv4.address }}"
+mysql_bind: "{{ ansible_enp0s3.ipv4.address }}"

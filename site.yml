@@ -1,3 +1,4 @@
 ---
 # site.yml : this is the site wide playbook
 - include: www.yml
+- include: db.yml
